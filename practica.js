@@ -14,9 +14,123 @@ const fetchPokemon = () => {
     .then((datos) => {
       console.log(datos);
       /* IMAGEN */
-      let pokeImagen = datos.sprites.other.dream_world.front_default;
+      let pokeImagen = datos.sprites.other.home.front_default;
       pokeImg(pokeImagen);
       /* ID */
+      let pokex = datos.name;
+      pokexy(pokex);
+      let pokeIdx = datos.id;
+      pokeId(pokeIdx);
+      /* TIPO */
+      let tipos = [];
+      let tipo = datos.types;
+      tipo.forEach(function (tip) {
+        tipos.push(tip.type.name);
+      });
+      let tiposString = JSON.stringify(tipos);
+      pokeTipo(tiposString);
+      /* HABILIDADES */
+      let habilidades = [];
+      let habilidad = datos.abilities;
+      habilidad.forEach(function (hab) {
+        habilidades.push(hab.ability.name);
+      });
+      let habilidadesString = JSON.stringify(habilidades);
+      pokeHab(habilidadesString);
+      /* STATS */
+      let hpx = datos.stats[0].base_stat;
+      pokeHp(hpx);
+      let attx = datos.stats[1].base_stat;
+      pokeAttack(attx);
+      let def = datos.stats[2].base_stat;
+      pokeDef(def);
+      /* CARACTERISTICAS */
+      let height = datos.height;
+      pokeSize(height);
+      let weight = datos.weight;
+      pokePeso(weight);
+
+      console.log(pokeIdx + 1);
+    });
+};
+
+const nextPokemon = () => {
+  const pokeNext = document.getElementById("pokeId").innerText;
+  let pokeDato = parseInt(pokeNext) + 1;
+  const url = `https://pokeapi.co/api/v2/pokemon/${pokeDato}`;
+  console.log(pokeDato);
+
+  fetch(url)
+    .then((res) => {
+      if (res.status != 200) {
+        pokeImg("./assets/error3.gif");
+      } else {
+        return res.json();
+      }
+    })
+    .then((datos) => {
+      console.log(datos);
+      /* IMAGEN */
+      let pokeImagen = datos.sprites.other.home.front_default;
+      pokeImg(pokeImagen);
+      /* ID */
+      let pokex = datos.name;
+      pokexy(pokex);
+      let pokeIdx = datos.id;
+      pokeId(pokeIdx);
+      /* TIPO */
+      let tipos = [];
+      let tipo = datos.types;
+      tipo.forEach(function (tip) {
+        tipos.push(tip.type.name);
+      });
+      let tiposString = JSON.stringify(tipos);
+      pokeTipo(tiposString);
+      /* HABILIDADES */
+      let habilidades = [];
+      let habilidad = datos.abilities;
+      habilidad.forEach(function (hab) {
+        habilidades.push(hab.ability.name);
+      });
+      let habilidadesString = JSON.stringify(habilidades);
+      pokeHab(habilidadesString);
+      /* STATS */
+      let hpx = datos.stats[0].base_stat;
+      pokeHp(hpx);
+      let attx = datos.stats[1].base_stat;
+      pokeAttack(attx);
+      let def = datos.stats[2].base_stat;
+      pokeDef(def);
+      /* CARACTERISTICAS */
+      let height = datos.height;
+      pokeSize(height);
+      let weight = datos.weight;
+      pokePeso(weight);
+    });
+};
+
+const antPokemon = () => {
+  const pokeAnt = document.getElementById("pokeId").innerText;
+  let pokeDato = parseInt(pokeAnt) - 1;
+  const url = `https://pokeapi.co/api/v2/pokemon/${pokeDato}`;
+  console.log(pokeDato);
+
+  fetch(url)
+    .then((res) => {
+      if (res.status != 200) {
+        pokeImg("./assets/error3.gif");
+      } else {
+        return res.json();
+      }
+    })
+    .then((datos) => {
+      console.log(datos);
+      /* IMAGEN */
+      let pokeImagen = datos.sprites.other.home.front_default;
+      pokeImg(pokeImagen);
+      /* ID */
+      let pokex = datos.name;
+      pokexy(pokex);
       let pokeIdx = datos.id;
       pokeId(pokeIdx);
       /* TIPO */
@@ -61,6 +175,11 @@ const pokeId = (id) => {
   const pokeId = document.getElementById("pokeId");
   pokeId.innerHTML = id;
   idx.innerHTML = "poke Id";
+};
+
+const pokexy = (name) => {
+  const pokexy = document.getElementById("pokeNombre");
+  pokexy.value = name;
 };
 
 const pokeTipo = (dato) => {

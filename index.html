@@ -30,55 +30,77 @@
           <div>
             <textarea
               class="eleccion"
-              style="resize: none"
+              style="resize: none; text-transform: capitalize"
               type="text"
-              placeholder="Elige tu pokemon"
+              placeholder="Id o nombre de pokemon"
               id="pokeNombre"
               name="pokeNombre"
+              value=""
             ></textarea>
           </div>
         </div>
       </div>
       <div class="card-body pantallaimagen text-center pokePantalla2">
-        <div style="margin-top: 66px">
-          <div style="width: 245px; height: 82px; overflow: auto">
-            <table class="textTabla" id="tabla" cellpadding="5">
-              <tr>
-                <th id="idx"></th>
-                <td id="pokeId"></td>
-              </tr>
-              <tr>
-                <th id="tipx"></th>
-                <td id="pokeTipo"></td>
-              </tr>
-              <tr>
-                <th id="tamx"></th>
-                <td id="pokeTam"></td>
-              </tr>
-              <tr>
-                <th id="pesox"></th>
-                <td id="pokePeso"></td>
-              </tr>
-              <tr>
-                <th id="habil"></th>
-                <td id="pokeHab"></td>
-              </tr>
-              <tr>
-                <th id="hpx"></th>
-                <td id="pokeHp"></td>
-              </tr>
-              <tr>
-                <th id="ataqx"></th>
-                <td id="pokeAttack"></td>
-              </tr>
-              <tr>
-                <th id="defenx"></th>
-                <td id="pokeDef"></td>
-              </tr>
-            </table>
+        <div class="flex-container tablapos">
+          <table class="textTabla" id="tabla" cellpadding="5">
+            <tr>
+              <th id="idx"></th>
+              <td id="pokeId"></td>
+            </tr>
+            <tr>
+              <th id="tipx"></th>
+              <td id="pokeTipo"></td>
+            </tr>
+            <tr>
+              <th id="tamx"></th>
+              <td id="pokeTam"></td>
+            </tr>
+            <tr>
+              <th id="pesox"></th>
+              <td id="pokePeso"></td>
+            </tr>
+            <tr>
+              <th id="habil"></th>
+              <td id="pokeHab"></td>
+            </tr>
+            <tr>
+              <th id="hpx"></th>
+              <td id="pokeHp"></td>
+            </tr>
+            <tr>
+              <th id="ataqx"></th>
+              <td id="pokeAttack"></td>
+            </tr>
+            <tr>
+              <th id="defenx"></th>
+              <td id="pokeDef"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="flex-container">
+          <div class="flex-container">
+            <button class="boton btnx btnpos1" onclick="fetchPokemon()">
+              Mostrar
+            </button>
           </div>
-          <div style="margin-top: 5px">
-            <button class="boton btnx" onclick="fetchPokemon()">Mostrar</button>
+          <div
+            class="flex-container"
+            style="margin-top: -79px; margin-left: -48px"
+          >
+            <button
+              class="boton btnx"
+              style="margin-left: -197px"
+              onclick="nextPokemon()"
+            >
+              Siguiente
+            </button>
+            <button
+              class="boton btnx"
+              style="margin-left: -236px"
+              onclick="antPokemon()"
+            >
+              Anterior
+            </button>
           </div>
         </div>
       </div>

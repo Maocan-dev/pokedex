@@ -57,11 +57,22 @@
 .textTabla {
   color: #60cb45;
 }
+.tablapos {
+  margin-top: -95px;
+  width: 245px;
+  height: 82px;
+  overflow: auto;
+}
 .btnx {
   margin-top: 117px;
   margin-left: -144px;
   width: 100px;
   height: 37px;
+}
+
+.btnpos1 {
+  margin-top: 341px;
+  margin-left: -389px;
 }
 
 /* width */
@@ -90,4 +101,12 @@
 ::-webkit-scrollbar-thumb:horizontal {
   background: rgb(33, 206, 27);
   border-radius: 2px;
+}
+
+.flex-container {
+  align-content: center;
+}
+.posboton1 {
+  margin-top: 340px;
+  margin-left: -152px;
 }
