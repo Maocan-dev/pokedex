@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estilo.css" />
+    <title>Pokedex LauchX</title>
+  </head>
+  <body class="background">
+    <div class="grid-container">
+      <h1 class="titulo">Pokedex LauchX</h1>
+      <input
+        class="right"
+        type="text"
+        placeholder="Elige tu pokemon"
+        id="pokeNombre"
+        name="pokeNombre"
+      />
+    </div>
+
+    <div>
+      <img
+        class="imagen"
+        src="./assets/error2.gif"
+        id="pokeImg"
+        alt="Pokemon"
+      />
+    </div>
+    <div
+      class="card"
+      style="
+        width: 15rem;
+        height: 10rem;
+        background-color: white;
+        display: flex;
+      "
+    >
+      <label>Tipo(s)</label>
+      <input id="pokeTipo" name="pokeTipo" value="" />
+
+      <button class="boton" onclick="fetchPokemon()">Mostrar</button>
+    </div>
+  </body>
+  <footer>
+    <script src="./practica.js"></script>
+  </footer>
+</html>

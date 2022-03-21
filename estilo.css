@@ -1,0 +1,60 @@
+.contenido {
+  margin-left: 142px;
+  margin-top: 175px;
+}
+.grid-container {
+  display: flex;
+}
+.pokePantalla {
+  background-image: url("./assets/pantalla\ pokedex.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pokePantalla2 {
+  background-image: url("./assets/datos\ pokedex.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imagen {
+  margin-top: 244px;
+  margin-left: 88px;
+  width: 354px;
+  height: 236px;
+  border-radius: 15px;
+}
+.imagen2 {
+  margin-top: 665px;
+  margin-left: 121px;
+  width: 224px;
+  height: 140px;
+}
+.boton {
+  margin-top: 67px;
+  margin-left: 588px;
+  height: 45px;
+  width: 105px;
+}
+.background {
+  background-image: url(./assets/pokedex.jpg);
+  background-repeat: no-repeat;
+  background-color: rgb(0, 0, 0);
+}
+.right {
+  width: 252px;
+  height: 55px;
+  border: 3px solid #73ad21;
+  padding: 10px;
+  margin-top: 234px;
+  margin-left: 320px;
+}
+.titulo {
+  margin-top: 124px;
+  margin-left: 30px;
+}
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  border-color: gray;
+}

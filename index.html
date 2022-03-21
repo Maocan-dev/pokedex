@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="./assets/css/bootstrap.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+    <link rel="stylesheet" href="./nuevoestilo.css" media="screen" />
+    <title>POKEDEX</title>
+  </head>
+  <body style="background-color: black">
+    <section class="row">
+      <div class="card-body pantallaimagen text-center pokePantalla">
+        <div class="col">
+          <div class="acomodo">
+            <p class="parrafo">Pokedex LauchX</p>
+          </div>
+          <div>
+            <img
+              class="imagen"
+              src="./assets/error2.gif"
+              id="pokeImg"
+              alt="Pokemon"
+            />
+          </div>
+          <div>
+            <textarea
+              class="eleccion"
+              style="resize: none"
+              type="text"
+              placeholder="Elige tu pokemon"
+              id="pokeNombre"
+              name="pokeNombre"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="card-body pantallaimagen text-center pokePantalla2">
+        <div style="margin-top: 66px">
+          <div style="width: 245px; height: 82px; overflow: auto">
+            <table class="textTabla" id="tabla" cellpadding="5">
+              <tr>
+                <th id="idx"></th>
+                <td id="pokeId"></td>
+              </tr>
+              <tr>
+                <th id="tipx"></th>
+                <td id="pokeTipo"></td>
+              </tr>
+              <tr>
+                <th id="tamx"></th>
+                <td id="pokeTam"></td>
+              </tr>
+              <tr>
+                <th id="pesox"></th>
+                <td id="pokePeso"></td>
+              </tr>
+              <tr>
+                <th id="habil"></th>
+                <td id="pokeHab"></td>
+              </tr>
+              <tr>
+                <th id="hpx"></th>
+                <td id="pokeHp"></td>
+              </tr>
+              <tr>
+                <th id="ataqx"></th>
+                <td id="pokeAttack"></td>
+              </tr>
+              <tr>
+                <th id="defenx"></th>
+                <td id="pokeDef"></td>
+              </tr>
+            </table>
+          </div>
+          <div style="margin-top: 5px">
+            <button class="boton btnx" onclick="fetchPokemon()">Mostrar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <section>
+      <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    </section>
+  </body>
+  <footer>
+    <script src="./practica.js"></script>
+  </footer>
+</html>
