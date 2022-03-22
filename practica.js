@@ -27,16 +27,14 @@ const fetchPokemon = () => {
       tipo.forEach(function (tip) {
         tipos.push(tip.type.name);
       });
-      let tiposString = JSON.stringify(tipos);
-      pokeTipo(tiposString);
+      pokeTipo(tipos);
       /* HABILIDADES */
       let habilidades = [];
       let habilidad = datos.abilities;
       habilidad.forEach(function (hab) {
         habilidades.push(hab.ability.name);
       });
-      let habilidadesString = JSON.stringify(habilidades);
-      pokeHab(habilidadesString);
+      pokeHab(habilidades);
       /* STATS */
       let hpx = datos.stats[0].base_stat;
       pokeHp(hpx);
@@ -84,16 +82,14 @@ const nextPokemon = () => {
       tipo.forEach(function (tip) {
         tipos.push(tip.type.name);
       });
-      let tiposString = JSON.stringify(tipos);
-      pokeTipo(tiposString);
+      pokeTipo(tipos);
       /* HABILIDADES */
       let habilidades = [];
       let habilidad = datos.abilities;
       habilidad.forEach(function (hab) {
         habilidades.push(hab.ability.name);
       });
-      let habilidadesString = JSON.stringify(habilidades);
-      pokeHab(habilidadesString);
+      pokeHab(habilidades);
       /* STATS */
       let hpx = datos.stats[0].base_stat;
       pokeHp(hpx);
@@ -139,16 +135,14 @@ const antPokemon = () => {
       tipo.forEach(function (tip) {
         tipos.push(tip.type.name);
       });
-      let tiposString = JSON.stringify(tipos);
-      pokeTipo(tiposString);
+      pokeTipo(tipos);
       /* HABILIDADES */
       let habilidades = [];
       let habilidad = datos.abilities;
       habilidad.forEach(function (hab) {
         habilidades.push(hab.ability.name);
       });
-      let habilidadesString = JSON.stringify(habilidades);
-      pokeHab(habilidadesString);
+      pokeHab(habilidades);
       /* STATS */
       let hpx = datos.stats[0].base_stat;
       pokeHp(hpx);
@@ -184,12 +178,12 @@ const pokexy = (name) => {
 
 const pokeTipo = (dato) => {
   const pokeTipo = document.getElementById("pokeTipo", "tipx");
-  pokeTipo.innerHTML = dato;
+  pokeTipo.innerHTML = dato.toString();
   tipx.innerHTML = "Tipo";
 };
 const pokeHab = (habilidad) => {
   const pokeHab = document.getElementById("pokeHab", "habil");
-  pokeHab.innerHTML = habilidad;
+  pokeHab.innerHTML = habilidad.toString();
   habil.innerHTML = "Habilidades";
 };
 const pokeHp = (vida) => {
